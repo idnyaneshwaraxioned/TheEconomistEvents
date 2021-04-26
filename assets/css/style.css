@@ -250,6 +250,7 @@ nav a { color: #000; }
   text-align: left;
 }
 
+.imagin-logo figure,
 .banner-heading figure {
   width: 9.8%;
   border-radius: 50%;
@@ -399,6 +400,139 @@ h3 {
   background-color: rgba(0,0,0,.4);
 }
 /* plenary-sessions end */
+
+/* Main slider start */
+.slider-main { 
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.slider-main .wrapper { 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider {
+  width: 86%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slider-main figure { position: relative; }
+
+.slider-main figure::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,.2);
+}
+
+.slider li { display: none; }
+
+.slider li:first-child {
+  display: block;
+}
+
+.slider-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.left-content { flex-basis: 45%; }
+
+.left-content span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+span.count {
+  margin: 35px 0;
+  font-size: 12vw;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.text-content {
+  flex-basis: 50%;
+  text-align: left;
+}
+
+.text-content p {
+  font-size: 28px;
+  font-weight: bold;
+}
+/* Main slider end */
+
+/* imagining section start  */
+.imagining { width: 100%; }
+
+.imagining .wrapper {
+  padding: 5.6% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.imagin-logo {
+  flex-basis: 39%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagin-logo figure {
+  width: 13%;
+  border: 6px solid #40676f;
+}
+
+.imagin-logo h2 {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 39px;
+}
+
+.imagin-logo-content { color: #40676f;}
+
+.imagin-logo h2 span {
+  display: block;
+  font-size: 32px;
+}
+
+.imagin-logo-content > span { font-weight: bold; }
+.imagining article { 
+  flex-basis: 60%;
+  color: #434246;
+}
+
+article h3 { color: #262627; } 
+
+.imagining article p {
+  padding-right: 17%;
+  font-size: 26px;
+  line-height: 29px;
+  font-family: serif;
+}
+
+article span {
+  font-size: 26px;
+  font-family: serif;
+}
+
+
+.imagining .space { 
+  display: block;
+  text-indent: -99999px;
+}
+
+/* imagining section end  */
 
 /*=================================
   main styling ends here
