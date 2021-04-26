@@ -99,19 +99,114 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1837px;
+  width: 93%;
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
 
+/* humburder icon */
 
+.hamburger { 
+  width: 40px;
+  height: 40px;
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 7%;
+}
 
+.bar1,
+.bar2,
+.bar3 {
+  width: 100%;
+  border-top: 2px solid #000;
+  text-indent: -99999px;
+  height: 0;
+  margin-bottom: 6px;
+  float: left;
+}
 
+.hamburger:hover .bar1 { transform: rotate(45deg) translateX(7px); }
+.hamburger:hover .bar2 { display: none; }
+.hamburger:hover .bar3 { transform: rotate(-45deg) translateX(5px); }
 
+/* Main header */
 
+header { width: 100%; }
+
+header .wrapper {
+  display: flex;
+  padding: 17px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo { flex-basis: 12.5%; }
+
+.logo a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+
+.logo-left {
+  width: 50%;
+  padding: 10px 6px;
+  display: block;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: serif;
+  line-height: 17px;
+  background-color: #E3120B;
+}
+
+.logo-right {
+  width: 50%;
+  padding: 10px 7px;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+nav,
+.main-menu,
+.sub-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav { flex-basis: 68.5%; }
+nav a { color: #000; }
+ 
+.main-menu { flex-basis: 65%; }
+
+.main-menu a { font-size: 21px; }
+
+.main-menu a:hover {text-decoration: underline;}
+.main-menu a.active { font-weight: bold; }
+
+.sub-menu { flex-basis: 31.5%; }
+
+.sub-menu a {
+  padding: 7px 20px;
+  border: 1px solid #142068;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.sub-menu a.active {
+  color: #fff;
+  background-color: #142068;
+}
 /*=================================
   Header styling ends here
 =================================*/  
