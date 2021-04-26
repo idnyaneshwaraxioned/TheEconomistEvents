@@ -217,7 +217,7 @@ nav a { color: #000; }
 /* banner start */
 .banner { 
   width: 100%;
-  position: absolute;
+  position: relative;
   color: #fff;
 }
 
@@ -307,7 +307,64 @@ nav a { color: #000; }
 /* banner end */
 
 
+/* tackel-question start */
+.tackel-question { 
+  width: 100%;
+  text-align: center;
+}
 
+.tackel-question .wrapper { 
+  width: 69.5%;
+  padding: 60px 0;
+}
+
+.tackel-question h3 {
+  font-size: 47px;
+  /* font-weight: bold; */
+  font-family: serif;
+}
+
+.tackel-question p {
+  padding: 0 6%;
+  margin: 35px 0;
+  font-size: 25px;
+  line-height: 31px;
+  font-family: serif;
+}
+
+.tackel-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tackel-item { 
+  flex-basis: 31.5%;
+  transition: ease .4s;
+}
+
+.tackel-item figure { position: relative; }
+
+.tackel-item:hover { box-shadow: 0 0 20px rgba(0,0,0,.5);}
+.tackel-item:hover figcaption { opacity: 0; }
+
+.tackel-item figure figcaption {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 27px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(144, 183, 177,.6);
+  transition: .6s;
+}
+
+/* tackel-question end */
 
 
 
