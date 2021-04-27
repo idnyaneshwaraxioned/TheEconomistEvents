@@ -201,8 +201,10 @@ nav a { color: #000; }
   border-radius: 20px;
   font-weight: bold;
   font-size: 17px;
+  transition: ease .4s;
 }
 
+.sub-menu a:hover,
 .sub-menu a.active {
   color: #fff;
   background-color: #142068;
@@ -298,13 +300,16 @@ nav a { color: #000; }
   font-weight: bold;
   font-size: 17px;
   color: #fff;
+  transition: ease .4s;
 }
 
+.banner-btn a:hover,
 .banner-btn a.active {
-  padding: 8px 4.7%;
   color: #40676f;
   background-color: #fff;
 }
+
+.banner-btn a.active { padding: 8px 4.7%; }
 /* banner end */
 
 
@@ -594,7 +599,11 @@ footer h4 {
   font-size: 17px;
   font-weight: bold;
   padding: 10px 0;
+  transition: ease .4s;
 }
+
+.footer-submenu a:hover,
+.group-list a:hover { text-decoration: underline; }
 
 .newsletter { flex-basis: 35%; }
 
@@ -642,6 +651,7 @@ footer h4 {
 .android::after { content: '\f17b'; }
 .applestore::after { content: '\f179'; }
 
+.social-list a:hover::after { opacity: .5; }
 
 /* newsletter-form start */
 .newsletter-form { padding-top: 5px; }
@@ -745,6 +755,12 @@ input[type="submit"] {
   outline: none;
   text-align: center;
   font-size: 18px;
+  transition: ease-in .4s;
+}
+
+input[type="submit"]:hover {
+  color: #d2d2d2;
+  background-color: #000;
 }
 /* newsletter-form end */
 
@@ -767,6 +783,8 @@ input[type="submit"] {
   font-weight: bold;
   color: #d2d2d2;
 }
+
+.footer-dwn a:hover { text-decoration: underline; }
 
 .footer-dwnlist { flex-basis: 47%; }
  /*=================================
