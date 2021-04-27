@@ -299,7 +299,7 @@ nav a { color: #000; }
   border-radius: 20px;
   margin: 0 15px;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 18px;
   color: #fff;
   transition: ease .4s;
 }
@@ -310,7 +310,7 @@ nav a { color: #000; }
   background-color: #fff;
 }
 
-.banner-btn a.active { padding: 8px 4.7%; }
+.banner-btn a.active { padding: 8px 4.5%; }
 /* banner end */
 
 
@@ -330,6 +330,7 @@ h3 {
   font-size: 47px;
   /* font-weight: bold; */
   font-family: serif;
+  color: #151212;
 }
 
 .tackel-question p {
@@ -338,6 +339,7 @@ h3 {
   font-size: 26px;
   line-height: 33px;
   font-family: serif;
+  color: #22282e;
 }
 
 .tackel-list {
@@ -515,7 +517,7 @@ span.count {
 
 .imagin-logo figure {
   width: 13%;
-  border: 6px solid #40676f;
+  border: 6px solid #45656b;
 }
 
 .imagin-logo h2 {
@@ -524,11 +526,11 @@ span.count {
   line-height: 39px;
 }
 
-.imagin-logo-content { color: #40676f;}
+.imagin-logo-content { color: #45656b; }
 
 .imagin-logo h2 span {
   display: block;
-  font-size: 32px;
+  font-size: 35px;
 }
 
 .imagin-logo-content > span { font-weight: bold; }
@@ -676,6 +678,7 @@ footer h4 {
 .form-control {
   margin: 6px 0;
   flex-basis: 47%;
+  position: relative;
 }
 
 .form-control select,
@@ -692,23 +695,30 @@ footer h4 {
 .form-control select {
   height: 100%;
   padding: 12px 3px;
-  position: relative;
   font-size: 16px;
-  -webkit-appearance: button;
-  appearance: button;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
 }
-
-.form-control select::after {
-  content: 'D';
-  color: red;
-  width: 40px;
-  height: 40px;
-  background-color: green;
+.form-control:nth-child(1)::after,
+.form-control:nth-child(6)::after,
+.form-control:nth-child(7)::after {
+  content: '\f0d7';
+  height: 20px;
+  padding: 0 12px;
+  border-left: 1px solid #c0bcbc;
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  font-size: 18px;
+  font-family: fontAwesome;
+  color: #808080;
+  transform: translateY(-50%);
+ 
 }
-
 
 .main-controls ::placeholder {
-  font-size: 15px;
+  font-size: 16px;
   /* font-weight: bold; */
 }
 
