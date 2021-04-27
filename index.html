@@ -21,6 +21,12 @@
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
 
+  <!-- Slick slider plugin -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <!-- Add the new slick-theme.css if you want the default styling -->
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 
 </head>
 
@@ -64,12 +70,12 @@
       <!-- Banner start -->
       <div class="banner">
         <figure>
-          <img src="https://picsum.photos/seed/picsum/1837/898" alt="Baner">
+          <img src="assets/images/image1.jpg" alt="Baner">
         </figure>
         <div class="wrapper">
           <div class="banner-heading">
             <figure>
-              <img src="https://image.shutterstock.com/image-vector/water-waves-logo-sea-flowing-600w-519880693.jpg"
+              <img src="assets/images/logo.webp"
                 alt="Ocean">
             </figure>
             <div class="heading-content">
@@ -101,7 +107,7 @@
               <a href="#fixme" title="Agenda">
                 <figure>
                   <img
-                    src="https://picsum.photos/400/225?random=3"
+                    src="assets/images/image2.jpg"
                     alt="Agenda">
                   <figcaption><span>Agenda</span></figcaption>
                 </figure>
@@ -111,7 +117,7 @@
               <a href="#fixme" title="Speakers">
                 <figure>
                   <img
-                    src="https://picsum.photos/400/225?random=4"
+                    src="assets/images/image3.jpg"
                     alt="Speakers">
                   <figcaption><span>Speakers</span></figcaption>
                 </figure>
@@ -121,7 +127,7 @@
               <a href="#fixme" title="Sponsors">
                 <figure>
                   <img
-                    src="https://picsum.photos/400/225?random=1"
+                    src="assets/images/image4.jpg"
                     alt="Sponsors">
                   <figcaption><span>Sponsors</span></figcaption>
                 </figure>
@@ -140,49 +146,49 @@
           <ul class="plenary-gallery">
             <li>
               <figure>
-                <img src="https://picsum.photos/1133/309?random=2" alt="Plenary session">
+                <img src="assets/images/image5.jpg" alt="Plenary session">
                 <figcaption><span>Plenary Sessions</span></figcaption>
               </figure>
             </li>
             <li>
               <figure>
-                <img src="https://picsum.photos/549/309?random=3" alt="Aquaculture">
+                <img src="assets/images/image6.jpg" alt="Aquaculture">
                 <figcaption><span>Aquaculture</span></figcaption>
               </figure>
             </li>
             <li>
               <figure>
-                <img src="https://picsum.photos/549/309?random=3" alt="Energy">
+                <img src="assets/images/image7.jpg" alt="Energy">
                 <figcaption><span>Energy</span></figcaption>
               </figure>
             </li>
             <li>
               <figure>
-                <img src="https://picsum.photos/549/309?random=4" alt="Plastics">
+                <img src="assets/images/image8.jpg" alt="Plastics">
                 <figcaption><span>Plastics</span></figcaption>
               </figure>
             </li>
             <li>
               <figure>
-                <img src="https://picsum.photos/549/309?random=5" alt="Fishing">
+                <img src="assets/images/image9.jpg" alt="Fishing">
                 <figcaption><span>Fishing</span></figcaption>
               </figure>
             </li>
             <li>
               <figure>
-                <img src="https://picsum.photos/549/309?random=6" alt="Shipping">
+                <img src="assets/images/image10.jpg" alt="Shipping">
                 <figcaption><span>Shipping</span></figcaption>
               </figure>
             </li>
             <li>
               <figure>
-                <img src="https://picsum.photos/549/309?random=7" alt="Tourism">
+                <img src="assets/images/image11.jpg" alt="Tourism">
                 <figcaption><span>Tourism</span></figcaption>
               </figure>
             </li>
             <li>
               <figure>
-                <img src="https://picsum.photos/549/309?random=8" alt="New for 2021">
+                <img src="assets/images/image12.jpg" alt="New for 2021">
                 <figcaption><span>See what's new for 2021</span></figcaption>
               </figure>
             </li>
@@ -194,7 +200,7 @@
       <!-- Slider start -->
       <div class="slider-main">
         <figure>
-          <img src="https://picsum.photos/1838/556?random=9" alt="Slider background">
+          <img src="assets/images/sliderbackground.jpg" alt="Slider background">
         </figure>
         <div class="wrapper">
           <ul class="slider">
@@ -244,7 +250,7 @@
         <div class="wrapper">
           <div class="imagin-logo">
             <figure>
-              <img src="https://image.shutterstock.com/image-vector/water-waves-logo-sea-flowing-600w-519880693.jpg"
+              <img src="assets/images/logo.webp"
                 alt="Ocean">
             </figure>
             <div class="imagin-logo-content">
@@ -325,19 +331,19 @@
                   <span class="error"></span>
                 </div>
                 <div class="form-control">
-                  <input type="text" placeholder="First name">
+                  <input type="text" placeholder="First name" class="fname">
                   <span class="error"></span>
                 </div>
                 <div class="form-control">
-                  <input type="text" placeholder="Surname">
+                  <input type="text" placeholder="Surname" class="sname">
                   <span class="error"></span>
                 </div>
                 <div class="form-control">
-                  <input type="text" placeholder="Job Title">
+                  <input type="text" placeholder="Job Title" class="job">
                   <span class="error"></span>
                 </div>
                 <div class="form-control">
-                  <input type="text" placeholder="Company">
+                  <input type="text" placeholder="Company" class="company">
                   <span class="error"></span>
                 </div>
                 <div class="form-control">
@@ -348,16 +354,26 @@
                   </select>
                   <span class="error"></span>
                 </div>
+                <div class="form-control">
+                  <select name="type" id="country">
+                    <option value="country">-- Please Select Country --</option>
+                    <option value="india">INDA</option>
+                    <option value="usa">USA</option>
+                  </select>
+                  <span class="error"></span>
+                </div>
+                <div class="form-control">
+                  <input type="email" placeholder="Email" class="email">
+                  <span class="error"></span>
+                </div>
               </div>
               <p>The World Ocean Initiative is a part of the Economist Group. We would love to keep you informed about
                 other Economist events, newly-released content, our best subscription offers, and great new product
                 offerings from The Economist Group</p>
               <div class="subscribe">
-                <div class="form-control">
-                  <label for="wish">I wish to be contacted by email</label>
                   <input type="checkbox" name="wish" id="wish">
+                  <label for="wish" class="wish">I wish to be contacted by email</label>
                   <span class="error"></span>
-                </div>
                 <input type="submit" value="Subscribe" class="subscribe">
               </div>
               <p>The Economist Group is a global organisation and operates a strict privacy policy around the world.
@@ -383,7 +399,6 @@
   </div>
   <!--container end-->
 
-  <script src="assets/vendor/jquery-1.8.3.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
