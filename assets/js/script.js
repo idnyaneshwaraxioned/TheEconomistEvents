@@ -16,6 +16,21 @@ function toggleNav() {
 }
 toggleNav();
 
+// Active anchor menu item 
+
+function anchorActive() {
+	let anchor = document.querySelectorAll('.menu-item a');
+
+	anchor.forEach(function (val) {
+		val.addEventListener('click', function () {
+			anchor.forEach(function (elem) {
+				elem.classList.remove('active');
+			});
+			val.classList.add('active');
+		});
+	});
+}
+anchorActive()
 
 // Form validation
 
@@ -94,6 +109,31 @@ function formValidate() {
 }
 formValidate();
 
+// Scroll btn
+
+function scrolbtn() {
+	let scrollBtn = document.querySelector('.scrollbtn');
+
+	window.addEventListener("scroll", function () {
+
+		let scrollVal = this.scrollY;
+
+		if (scrollVal > 600) {
+			scrollBtn.classList.add('active');
+		}
+		else {
+			scrollBtn.classList.remove('active');
+		}
+	});
+	scrollBtn.addEventListener("click", function () {
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: "smooth"
+		});
+	});
+}
+scrolbtn();
 
 // homepage slider 
 
