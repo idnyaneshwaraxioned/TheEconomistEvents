@@ -196,19 +196,22 @@ nav a { color: #000; }
 
 .sub-menu { flex-basis: 31.5%; }
 
-.sub-menu a {
+.sub-menu a,
+.speaker-btn a,
+.load-btn a {
   padding: 7px 20px;
-  border: 1px solid #142068;
+  border: 1px solid #0E4351;
   border-radius: 20px;
   font-weight: bold;
   font-size: 17px;
   transition: ease .4s;
+  color: #0E4351;
 }
 
 .sub-menu a:hover,
 .sub-menu a.active {
   color: #fff;
-  background-color: #142068;
+  background-color: #0E4351;
 }
 /*=================================
   Header styling ends here
@@ -714,6 +717,124 @@ h2 {
 /*============================
  New page CSS end 
  ============================*/
+
+/*=============================
+Speakers page start 
+==============================*/
+.speaker-mainheading { margin-bottom: 20px; }
+.speaker-mainheading h2 {
+  padding: 15px 0;
+  font-size: 27px;
+  font-weight: bold;
+  border-bottom: 5px solid #000;
+  margin: 43px 0;
+}
+
+.speaker-mainheading p { font-size: 23px; }
+
+.speaker-btn {
+  padding: 39px 0;
+  text-align: end;
+  border-bottom: 1px solid #808080;
+}
+
+.speaker-tabs {
+  padding: 5px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-btn a {
+  padding: 10px 26px;
+  border: 2px solid #40676f;
+  border-radius: 6px;
+  margin: 10px 16px;
+  font-size: 20px;
+  color: #0E4351;
+}
+
+.filter-btn a.active { border: 2px solid #c0bcbc; }
+
+
+.searchbox {
+  display: flex;
+  justify-content: flex-end;
+  }
+
+.searchbox input {
+  width: 61%;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 18px;
+  border: 2px solid;
+  padding: 11px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.searchbox button {
+  border: none;
+  padding: 11px 17px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 18px;
+  background-color: #0E4351;
+}
+
+.searchbox button::after {
+  content: '\f002';
+  font-family: fontAwesome;
+  color: #fff;
+}
+
+.searchbox button span {
+  text-indent: -99999px;
+  float: left;
+}
+
+.speakerlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.speakerlist li { 
+  padding: 25px 0;
+  flex-basis: 16%;
+  display: none;
+  }
+
+.speakerlist li figure {
+  width: 65%;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.speaker_name {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.speaker-title {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.load-btn {
+  padding: 40px 0;
+  margin: 40px 0;
+  text-align: center;
+}
+  /*=============================
+  Speakers page end
+  ==============================*/
+
+
 /*=================================
   main styling ends here
 =================================*/
