@@ -135,6 +135,41 @@ function scrolbtn() {
 }
 scrolbtn();
 
+// new page plenary section white box
+
+function whitebox() {
+	let mainBox = document.createElement('div');
+	let imgbox = document.createElement('div');
+	let boxImage = document.createElement('img');
+	let closeBtn = document.createElement('button');
+	let plenaryItem = document.querySelectorAll('#plenary li');
+
+	mainBox.classList.add('mainbox');
+	imgbox.classList.add('whitebox');
+	closeBtn.classList.add('whiteBtn');
+	imgbox.appendChild(closeBtn);
+	imgbox.appendChild(boxImage);
+	mainBox.appendChild(imgbox);
+	document.body.appendChild(mainBox);
+
+	plenaryItem.forEach(function (val) {
+		val.addEventListener('click', function () {
+			let img = val.querySelector('img');
+			boxImage.src = img.src;
+
+			setTimeout(function () {
+				mainBox.style.display = 'block';
+			}, 300);
+		});
+	});
+
+	closeBtn.addEventListener('click', function () {
+		mainBox.style.display = 'none';
+	});
+}
+whitebox();
+
+
 // homepage slider 
 
 $(document).ready(function () {
