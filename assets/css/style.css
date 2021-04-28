@@ -805,7 +805,7 @@ Speakers page start
 .speakerlist li { 
   padding: 25px 0;
   flex-basis: 16%;
-  /* display: none; */
+  display: none;
   }
 
 .speakerlist li figure {
