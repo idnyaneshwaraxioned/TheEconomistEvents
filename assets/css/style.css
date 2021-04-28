@@ -578,7 +578,7 @@ article span {
   border-bottom: 5px solid #000;
 }
 
-.news-banner h2 {
+h2 {
   padding: 15px 0;
   font-size: 27px;
   font-weight: bold;
@@ -627,10 +627,15 @@ article span {
 /* news-banner end */
 
 /* New page article start */
-.superyear {}
 
-.focus .wrapper,
-.superyear .wrapper { 
+.superyear-focus .wrapper {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #434246;
+}
+
+.focus,
+.superyear { 
+  margin: 38px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -656,6 +661,56 @@ article span {
 .superyear-content p { padding-right: 4%; }
 /* New page article end */
 
+/* new plenary section start */
+.new-plenary .plenary-gallery { margin: 0 0 35px; }
+
+.new-plenary h2 { 
+  padding: 15px 0 5px;
+  font-size: 22px;
+} 
+
+.mainbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.6);
+}
+
+.whitebox {
+  width: 65%;
+  border: 5px solid #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: red;
+  z-index: 10;
+}
+
+.whitebox .whiteBtn {
+  width: 25px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.whitebox .whiteBtn::after {
+  content: 'x';
+  font-size: 20px;  
+}
+
+
+/* new plenary section end */
 
 /*============================
  New page CSS end 
