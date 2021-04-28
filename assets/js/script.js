@@ -170,6 +170,76 @@ function whitebox() {
 whitebox();
 
 
+// Speaker filter 
+
+function speakerfun() {
+
+	let filterlist = document.querySelectorAll('.filter-btn li');
+	let speaker = document.querySelectorAll('.speakerlist li');
+	let loadbtn = document.querySelector('.load-btn a');
+	let searchinput = document.querySelector('.searchbox input');
+	let index = 6;
+
+	for (let i = 0; i < filterlist.length; i++) {
+		filterlist[i].addEventListener('click', function () {
+			let filterVal = this.querySelector('a').getAttribute('title');
+
+			filterlist.forEach(function (val) {
+				val.querySelector('a').classList.remove('active');
+			})
+
+			filterlist[i].querySelector('a').classList.add('active');
+
+			speaker.forEach(function (val) {
+				let datatrr = val.getAttribute('data-filter');
+
+				if (datatrr === filterVal) {
+					val.style.display = "unset";
+				}
+				else {
+					val.style.display = "none";
+				}
+
+				if (filterVal === "all") {
+					val.style.display = 'block';
+				}
+			});
+		})
+	}
+
+	loadbtn.addEventListener('click', function () {
+		index = index + 6;
+		if (index === 30) {
+			loadbtn.style.display = 'none';
+		}
+		showspeaker();
+	})
+
+	function showspeaker() {
+		for (let i = 0; i < index; i++) {
+			speaker[i].style.display = 'block';
+		}
+	}
+	showspeaker();
+
+	searchinput.addEventListener('keyup', function () {
+		
+		speaker.forEach(function (val) {
+			let sname = val.querySelector('.speaker_name').innerText;
+			if (sname.toLowerCase().indexOf(searchinput.value.toLowerCase()) > -1 ) {
+				val.style.display = "block";
+			}
+			else {
+				val.style.display = "none";
+			}
+		});
+	});
+
+}
+speakerfun();
+
+
+
 // homepage slider 
 
 $(document).ready(function () {
