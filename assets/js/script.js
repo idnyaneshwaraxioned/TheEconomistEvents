@@ -44,6 +44,7 @@ function formValidate() {
 	let industry = document.querySelector('#industry');
 	let country = document.querySelector('#country');
 	let email = document.querySelector('.email');
+	let notify = document.querySelector('#wish')
 	let userCheck = /^[A-Za-z. ]{3,30}$/;
 	let emailexp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -79,6 +80,9 @@ function formValidate() {
 			return false;
 		} else if (!email.value || !emailexp.test(email.value)) {
 			setError(email, '*Enter valid mail ID');
+			return false;
+		}else if (!notify.checked) {
+			setError(notify, '*Please checked wish');
 			return false;
 		} else {
 			return true;
