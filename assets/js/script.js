@@ -236,33 +236,24 @@ function speakerfun() {
 	});
 
 }
-speakerfun();
 
+let  page_path = window.location.href;
 
+if(page_path.includes('speakers.html')){
+	speakerfun();
+}
 
 // homepage slider 
 
-$(document).ready(function () {
-	$('.slider').slick({
-		dots: true,
-		autoplay: true,
-		autoplaySpeed: 2000,
+if(page_path.includes('index.html')){
+	$(document).ready(function () {
+		$('.slider').slick({
+			dots: true,
+			autoplay: true,
+			autoplaySpeed: 2000,
+		});
 	});
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
