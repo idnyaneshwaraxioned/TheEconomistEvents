@@ -933,14 +933,38 @@ Speakers page start
   -ms-flex-preferred-size: 16%;
       flex-basis: 16%;
   display: none;
-  }
+}
 
 .speakerlist li figure {
   width: 65%;
-  margin: 0 auto;
+  margin: 0 auto 25px auto;
   border-radius: 50%;
-  overflow: hidden;
+  position: relative;
 }
+
+.speakerlist li figure img { border-radius: 50%; }
+
+.speakerlist figure::after {
+  content: '';
+  width: 47px;
+  height: 37px;
+  background: url('../images/flag.png');
+  background-position: 0 0;
+  position: absolute;
+  right: -16%;
+  bottom: 0%;
+  border: 5px solid #efe9e9;
+  border-radius: 28%;
+}
+
+.speakerlist li:nth-child(1) figure::after { background-position: 11% 64%; }
+.speakerlist li:nth-child(2) figure::after { background-position: 58% 10%; }
+.speakerlist li:nth-child(3) figure::after { background-position: 6% 10%; }
+.speakerlist li:nth-child(4) figure::after { background-position: 21% 100%; }
+.speakerlist li:nth-child(5) figure::after { background-position: 21% 63%; }
+.speakerlist li:nth-child(9) figure::after { background-position: 94% 27%; }
+.speakerlist li:nth-child(10) figure::after { background-position: 47% 72%; }
+.speakerlist li:nth-child(12) figure::after { background-position: 94% 0; }
 
 .speaker_name {
   font-size: 22px;
@@ -1190,7 +1214,7 @@ footer h4 {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center;        
 }
 
 #wish {
