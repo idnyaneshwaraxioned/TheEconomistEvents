@@ -7,30 +7,13 @@
 function toggleNav() {
 	let hamburger = document.querySelector('.hamburger');
 	let menu1 = document.querySelector('.main-menu');
-	let menu2 = document.querySelector('.sub-menu');
 	hamburger.addEventListener('click', function () {
 		hamburger.classList.toggle('active');
 		menu1.classList.toggle('active');
-		menu2.classList.toggle('active');
 	})
 }
 toggleNav();
 
-// Active anchor menu item 
-
-function anchorActive() {
-	let anchor = document.querySelectorAll('.menu-item a');
-
-	anchor.forEach(function (val) {
-		val.addEventListener('click', function () {
-			anchor.forEach(function (elem) {
-				elem.classList.remove('active');
-			});
-			val.classList.add('active');
-		});
-	});
-}
-anchorActive()
 
 // Form validation
 
@@ -81,7 +64,7 @@ function formValidate() {
 		} else if (!email.value || !emailexp.test(email.value)) {
 			setError(email, '*Enter valid mail ID');
 			return false;
-		}else if (!notify.checked) {
+		} else if (!notify.checked) {
 			setError(notify, '*Please checked wish');
 			return false;
 		} else {
@@ -227,10 +210,10 @@ function speakerfun() {
 	showspeaker();
 
 	searchinput.addEventListener('keyup', function () {
-		
+
 		speaker.forEach(function (val) {
 			let sname = val.querySelector('.speaker_name').innerText;
-			if (sname.toLowerCase().indexOf(searchinput.value.toLowerCase()) > -1 ) {
+			if (sname.toLowerCase().indexOf(searchinput.value.toLowerCase()) > -1) {
 				val.style.display = "block";
 			}
 			else {
@@ -241,15 +224,15 @@ function speakerfun() {
 
 }
 
-let  page_path = window.location.href;
+let page_path = window.location.href;
 
-if(page_path.includes('speakers.html')){
+if (page_path.includes('speakers.html')) {
 	speakerfun();
 }
 
 // homepage slider 
 
-if(page_path.includes('index.html')){
+if (page_path.includes('index.html')) {
 	$(document).ready(function () {
 		$('.slider').slick({
 			dots: true,
