@@ -1,9 +1,5 @@
-/* Author: 
 
-*/
-
-// Humburger toogle menu icon
-
+// Humburger toogle menu icon start
 function toggleNav() {
 	let hamburger = document.querySelector('.hamburger');
 	let menu1 = document.querySelector('.main-menu');
@@ -13,10 +9,9 @@ function toggleNav() {
 	})
 }
 toggleNav();
+// Humburger toogle menu icon end
 
-
-// Form validation
-
+// Form validation start
 function formValidate() {
 	let form = document.querySelector('.newsletter-form');
 	let type = document.querySelector('#type')
@@ -27,7 +22,7 @@ function formValidate() {
 	let industry = document.querySelector('#industry');
 	let country = document.querySelector('#country');
 	let email = document.querySelector('.email');
-	let notify = document.querySelector('#wish')
+	let notify = document.querySelector('#wish');
 	let userCheck = /^[A-Za-z. ]{3,30}$/;
 	let emailexp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -74,13 +69,12 @@ function formValidate() {
 
 	function setError(input, message) {
 		let formControl = input.parentElement;
-		let errorSpan = formControl.querySelector('.error')
-		console.log(errorSpan);
+		let errorSpan = formControl.querySelector('.error');
 		errorSpan.innerText = message;
 
 		setTimeout(function () {
 			errorSpan.innerText = '';
-		}, 4000)
+		}, 2000)
 	}
 
 	function resetForm() {
@@ -95,14 +89,13 @@ function formValidate() {
 	}
 }
 formValidate();
+// Form validation done
 
-// Scroll btn
-
+// Scroll btn start
 function scrolbtn() {
 	let scrollBtn = document.querySelector('.scrollbtn');
 
 	window.addEventListener("scroll", function () {
-
 		let scrollVal = this.scrollY;
 
 		if (scrollVal > 600) {
@@ -112,6 +105,7 @@ function scrolbtn() {
 			scrollBtn.classList.remove('active');
 		}
 	});
+
 	scrollBtn.addEventListener("click", function () {
 		window.scrollTo({
 			top: 0,
@@ -121,9 +115,9 @@ function scrolbtn() {
 	});
 }
 scrolbtn();
+// Scroll btn end
 
-// new page plenary section white box
-
+// new page plenary section white box start
 function whitebox() {
 	let mainBox = document.createElement('div');
 	let imgbox = document.createElement('div');
@@ -155,12 +149,10 @@ function whitebox() {
 	});
 }
 whitebox();
+// new page plenary section white box end
 
-
-// Speaker filter 
-
+// Speaker page filter,load btn and search start 
 function speakerfun() {
-
 	let filterlist = document.querySelectorAll('.filter-btn li');
 	let speaker = document.querySelectorAll('.speakerlist li');
 	let loadbtn = document.querySelector('.load-btn a');
@@ -174,7 +166,6 @@ function speakerfun() {
 			filterlist.forEach(function (val) {
 				val.querySelector('a').classList.remove('active');
 			})
-
 			filterlist[i].querySelector('a').classList.add('active');
 
 			speaker.forEach(function (val) {
@@ -210,7 +201,6 @@ function speakerfun() {
 	showspeaker();
 
 	searchinput.addEventListener('keyup', function () {
-
 		speaker.forEach(function (val) {
 			let sname = val.querySelector('.speaker_name').innerText;
 			if (sname.toLowerCase().indexOf(searchinput.value.toLowerCase()) > -1) {
@@ -224,14 +214,14 @@ function speakerfun() {
 
 }
 
-let page_path = window.location.href;
+let page_path = window.location.href;  //getting active page path
 
 if (page_path.includes('speakers.html')) {
 	speakerfun();
 }
+// Speaker page filter,load btn and search end 
 
-// homepage slider 
-
+// homepage slider start
 if (page_path.includes('index.html')) {
 	$(document).ready(function () {
 		$('.slider').slick({
@@ -241,7 +231,7 @@ if (page_path.includes('index.html')) {
 		});
 	});
 }
-
+// homepage slider end
 
 
 
